@@ -11,6 +11,8 @@ const forecast = (latitude, longitude, callback) => {
         } else {
             callback(undefined, {
                 dailySummary : body.daily.data[0].summary,
+                dailyHigh: body.daily.data[0].temperatureHigh,
+                dailyLow: body.daily.data[0].temperatureLow,
                 temperature : body.currently.temperature,
                 precipProbability : body.currently.precipProbability
             })

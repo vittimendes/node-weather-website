@@ -27,7 +27,7 @@ weatherForm.addEventListener('submit', (e) => {
             messageOne.textContent = data.error
         } else {
             messageOne.textContent = data.location
-            messageTwo.textContent = data.forecast.dailySummary
+            messageTwo.textContent = data.forecast.dailySummary + ' Máxima: ' + data.forecast.dailyHigh + ' Mínima: ' + data.forecast.dailyLow
             console.log(data.location)
             console.log(data.forecast)
         }
